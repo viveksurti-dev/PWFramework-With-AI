@@ -1,0 +1,16 @@
+{
+  "login": {
+    "BASE_URL": "https://practicetestautomation.com/practice-test-login/",
+    "USER_NAME": "student",
+    "PASSWORD": "Password123"
+  },
+  "pageTitle": {
+    "Login_Page_Title": "Login - Ultimate QA"
+  },
+  "verification": {
+    "DASHBOARD_URL": "https://practicetestautomation.com/logged-in-successfully/",
+    "EXPECTED_USER_NAME": "student",
+    "SEARCH_COMPANY_HEADING": "Logged in Successfully",
+    "EXISTING_PORTFOLIO_HEADING": "Logout"
+  }
+}

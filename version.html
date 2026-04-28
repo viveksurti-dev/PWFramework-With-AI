@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWFramework AI Engine - Version History</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(148, 163, 184, 0.2);
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --success-color: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: 
+                radial-gradient(at 40% 20%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        .version-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .version-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .version-badge {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .version-date {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .feature-category {
+            margin-bottom: 20px;
+        }
+
+        .feature-category h3 {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: #e2e8f0;
+            font-size: 1.05rem;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>PWFramework AI Engine</h1>
+            <div class="subtitle">Changelog & Architecture Evolution</div>
+        </header>
+
+        <!-- LATEST VERSION -->
+        <div class="version-card" style="animation-delay: 0.1s;">
+            <div class="version-header">
+                <div class="version-number">
+                    v1.0.0 <span class="version-badge">LATEST</span>
+                </div>
+                <div class="version-date">April 2026</div>
+            </div>
+
+            <div class="feature-category">
+                <h3>🏗️ 3-Tier POM Architecture</h3>
+                <ul class="feature-list">
+                    <li>Overhauled AI Engine to natively generate the <span class="highlight">3-Tier Page Object Model (POM)</span> architecture mimicking manual framework patterns.</li>
+                    <li><strong>Page Layer:</strong> Automatically generates <code>pages/[safeName]Page.js</code> extending <code>BasePage</code> to define locators and user workflows.</li>
+                    <li><strong>Verification Layer:</strong> Isolates assertions by dynamically generating <code>verification/[safeName]Verification.js</code> utilizing strict <code>@playwright/test</code> expects.</li>
+                    <li><strong>Test Layer:</strong> Produces lightweight, modular <code>tests/[safeName]/Batch_[N].spec.js</code> files that execute flows using the generated Page Objects.</li>
+                    <li>Implemented intelligent JSON parsing in <code>automation_controller.js</code> to simultaneously parse and save all three files per batch generation cycle.</li>
+                </ul>
+            </div>
+
+            <div class="feature-category">
+                <h3>🚀 Playwright Migration & Native Execution</h3>
+                <ul class="feature-list">
+                    <li>Fully migrated the underlying extraction engine from <code>selenium-webdriver</code> to native <span class="highlight">Playwright APIs</span>.</li>
+                    <li>Upgraded <code>browser_service.js</code> to leverage Playwright's blazing-fast Chromium instances for full-page screenshotting and DOM extraction.</li>
+                    <li>Re-architected the Node.js execution loop to seamlessly run <code>npx playwright test</code> dynamically on newly generated scripts.</li>
+                    <li>Resolved deep ES Module (`import`) vs CommonJS (`require`) configuration conflicts to allow perfect compilation of `BasePage` dependencies within AI-generated tests.</li>
+                </ul>
+            </div>
+
+            <div class="feature-category">
+                <h3>⚙️ Framework Centralization</h3>
+                <ul class="feature-list">
+                    <li>Removed the isolated <code>package.json</code> from the E2E sub-directory, unifying all Playwright and AI dependencies into the root project directory.</li>
+                    <li>Introduced a global <code>npm run ai</code> command for frictionless execution of the automation engine from anywhere.</li>
+                    <li>Re-routed all AI artifacts (Layouts, Memory, Test Data, Observations) to central framework folders for a single source of truth.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Designed & Engineered for PWFramework | Powered by Advanced Agentic Code Generation
+        </div>
+    </div>
+
+</body>
+</html>

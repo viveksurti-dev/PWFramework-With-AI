@@ -1,0 +1,128 @@
+
+			<a class="skip-content" href="#main-container">Press "Enter" to skip to content</a>
+	<div id="overflow-container" class="overflow-container">
+		<div id="max-width" class="max-width">
+						<header class="site-header" id="site-header" role="banner">
+				<div class="header-top">
+					<div id="menu-secondary-container" class="menu-secondary-container">
+						<div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+    </div>
+					</div>
+					<div id="social-icons-container" class="social-icons-container">
+											</div>
+				</div>
+				<div class="header-middle">
+					<div id="title-container" class="title-container">
+						<div id="site-title" class="site-title"><a href="https://practicetestautomation.com/" class="custom-logo-link" rel="home"><img width="305" height="96" src="https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?fit=305%2C96&amp;ssl=1" class="custom-logo" alt="Practice Test Automation" decoding="async" srcset="https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?w=305&amp;ssl=1 305w, https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?resize=300%2C94&amp;ssl=1 300w" sizes="(max-width: 305px) 100vw, 305px"></a></div>											</div>
+									</div>
+				<div class="header-bottom">
+					<div id="mobile-menu-container" class="mobile-menu-container">
+						<div id="mobile-menu-container-inner">
+							<div id="close-mobile-menu" class="close-mobile-menu">
+								<button>
+																	</button>
+							</div>
+							<div id="menu-primary-container" class="menu-primary-container">
+								<div id="menu-primary" class="menu-container menu-primary" role="navigation">
+    <nav class="menu"><ul id="menu-primary-items" class="menu-primary-items"><li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-43"><a href="https://practicetestautomation.com/">Home</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://practicetestautomation.com/practice/">Practice</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://practicetestautomation.com/courses/">Courses</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="https://practicetestautomation.com/blog/">Blog</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://practicetestautomation.com/contact/">Contact</a></li>
+</ul></nav></div>
+							</div>
+						</div>
+					</div>
+					<div id="toggle-container" class="toggle-container">
+						<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+							<span class="screen-reader-text">open menu</span>
+													</button>
+					</div>
+				</div>
+			</header>
+									<section id="main-container" class="main-container" role="main">
+				
+<section id="login">
+	<h2>Test login</h2>
+	<ul>
+		<li>This is a simple Login page. Students can use this page to practice writing simple positive and negative LogIn tests. Login functionality is something that most of the test automation engineers need to automate.</li>
+		<li>Use next credentials to execute Login:
+		<br>Username: <b>student</b>
+		<br>Password: <b>Password123</b>
+		</li>
+	</ul>
+	<div id="form">
+		<div>
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password">
+		</div>
+		<button id="submit" class="btn">Submit</button>
+	</div>
+	<div id="error">Your username is invalid!</div>
+	<hr class="wp-block-separator">
+		<h5>Test case 1: Positive LogIn test</h5>
+		<ol>
+			<li>Open page</li>
+			<li>Type username <b>student</b> into Username field</li>
+			<li>Type password <b>Password123</b> into Password field</li>
+			<li>Push <b>Submit</b> button</li>
+			<li>Verify new page URL contains <b>practicetestautomation.com/logged-in-successfully/</b></li>
+			<!-- <li>Verify new page contains text 'Congratulations student. You successfully logged in!'</li> -->
+			<li>Verify new page contains expected text ('Congratulations' or 'successfully logged in')</li>
+			<li>Verify button <b>Log out</b> is displayed on the new page</li>
+		</ol>
+		<hr class="wp-block-separator">
+		<h5>Test case 2: Negative username test</h5>
+		<ol>
+			<li>Open page</li>
+			<li>Type username <b>incorrectUser</b> into Username field</li>
+			<li>Type password <b>Password123</b> into Password field</li>
+			<li>Push <b>Submit</b> button</li>
+			<li>Verify error message is displayed</li>
+			<li>Verify error message text is <b>Your username is invalid!</b></li>
+		</ol>
+		<hr class="wp-block-separator">
+		<h5>Test case 3: Negative password test</h5>
+		<ol>
+			<li>Open page</li>
+			<li>Type username <b>student</b> into Username field</li>
+			<li>Type password <b>incorrectPassword</b> into Password field</li>
+			<li>Push <b>Submit</b> button</li>
+			<li>Verify error message is displayed</li>
+			<li>Verify error message text is <b>Your password is invalid!</b></li>
+		</ol>
+	</section>
+	
+
+</section> <!-- .main-container -->
+
+<footer id="site-footer" class="site-footer" role="contentinfo">
+        <div class="design-credit">
+        <span>
+            © Copyright 2020  <a href="https://practicetestautomation.com/">Practice Test Automation.</a>  All rights reserved  |  <a href="https://practicetestautomation.com/privacy-policy/">Privacy Policy</a>        </span>
+    </div>
+</footer>
+</div><!-- .max-width -->
+</div><!-- .overflow-container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="https://pixel.wp.com/g.gif?v=ext&amp;blog=167878209&amp;post=251&amp;tz=-4&amp;srv=practicetestautomation.com&amp;j=1%3A14.5&amp;host=practicetestautomation.com&amp;ref=&amp;fcp=0&amp;rand=0.9561776175219839" alt="" width="6" height="5" id="wpstats">
