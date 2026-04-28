@@ -10,3 +10,4 @@ node_modules/
 # Test Evidence
 /reports/
 /allure-results/
+/E2E/.env
