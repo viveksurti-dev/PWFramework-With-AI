@@ -1,8 +1,19 @@
 const readline = require("readline/promises");
 const { stdin: input, stdout: output } = require("process");
 const { execSync } = require("child_process");
-const fileService = require("../services/file_service");
-const automationController = require("../controllers/automation_controller");
+const path = require("path");
+
+// Load environment variables
+require("dotenv").config();
+
+const fileService = require("./utils/services/FileHandler");
+const automationController = require("./config/AutomationManager");
+
+// API Key Validation
+if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === "your_api_key_here") {
+  console.error("\n ERROR: Please add your GEMINI_API_KEY to the .env file.");
+  process.exit(1);
+}
 
 async function runCliMenu() {
   const rl = readline.createInterface({ input, output });
@@ -52,7 +63,7 @@ async function runCliMenu() {
         await automationController.extractAndGenerateScenarios(url, safeName);
         memoryList = fileService.readScenarios(memoryPath);
         if (memoryList.length > 0) {
-          const proceed = await rl.question(`\n[PAUSE] Found ${memoryList.length} scenarios. Review them in memory/ folder if needed.\ny -> continue for automation and n -> safely abort: `);
+          const proceed = await rl.question(`\n[PAUSE] Found ${memoryList.length} scenarios. Review them in scenarios/ folder if needed.\ny -> continue for automation and n -> safely abort: `);
           if (proceed.toLowerCase().trim() !== 'y') {
             console.log("-> Aborted. You can execute them later using Option 3, 4, or 5.");
             break;
@@ -150,14 +161,14 @@ async function generatorMenu(rl) {
     const memoryFiles = fileService.getMemoryFiles();
     
     if (memoryFiles.length === 0) {
-        console.error("No scenarios found in memory.");
+        console.error("No scenarios found in scenarios folder.");
         return;
     }
 
-    console.log("\n-> Available Scenarios in Memory:");
+    console.log("\n-> Available Scenarios in scenarios folder:");
     memoryFiles.forEach((f, i) => console.log(`[${i + 1}]. ${f}`));
     
-    const fileIndexStr = await rl.question("\nSelect a memory file number to load (e.g., 1): ");
+    const fileIndexStr = await rl.question("\nSelect a scenario file number to load (e.g., 1): ");
     const fileIndex = parseInt(fileIndexStr) - 1;
     
     if (isNaN(fileIndex) || !memoryFiles[fileIndex]) {
@@ -166,7 +177,7 @@ async function generatorMenu(rl) {
     }
 
     const selectedFile = memoryFiles[fileIndex];
-    const memoryPath = fileService.basePath + "/memory/" + selectedFile;
+    const memoryPath = path.join(fileService.scenariosDir, selectedFile);
     const scenarioData = fileService.readScenarios(memoryPath);
     
     console.log(`\nFound ${scenarioData.length} test scenarios inside ${selectedFile}:`);
@@ -214,6 +225,9 @@ async function generatorMenu(rl) {
         console.error("Failed to generate or execute test:", e);
     }
 }
+
+// Auto-run the CLI menu
+runCliMenu().catch(console.error);
 
 module.exports = {
   runCliMenu

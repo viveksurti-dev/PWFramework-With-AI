@@ -30,7 +30,7 @@
       "password": "Password123",
       "expectedErrorMessage": "Your username is invalid!"
     },
-    "executedDate": "2026-04-28T17:44:04.776Z",
+    "executedDate": "2026-04-29T17:56:01.574Z",
     "executedBy": "",
     "Status": "Pass",
     "remarks": "Success"
@@ -47,7 +47,7 @@
       "password": "incorrectPassword",
       "expectedErrorMessage": "Your username is invalid!"
     },
-    "executedDate": "2026-04-28T17:44:05.477Z",
+    "executedDate": "2026-04-29T17:56:00.789Z",
     "executedBy": "",
     "Status": "Pass",
     "remarks": "Success"
@@ -64,7 +64,7 @@
       "password": "wrongPassword",
       "expectedErrorMessage": "Your username is invalid!"
     },
-    "executedDate": "2026-04-28T17:44:06.282Z",
+    "executedDate": "2026-04-29T17:56:01.902Z",
     "executedBy": "",
     "Status": "Pass",
     "remarks": "Success"
@@ -81,7 +81,7 @@
       "password": "Password123",
       "expectedErrorMessage": "Your username is invalid!"
     },
-    "executedDate": "2026-04-28T17:44:04.711Z",
+    "executedDate": "2026-04-29T17:56:02.026Z",
     "executedBy": "",
     "Status": "Pass",
     "remarks": "Success"
@@ -485,6 +485,117 @@
       "invalidUsername": "invalidUser",
       "validPassword": "Password123",
       "expectedErrorMessage": "Your username is invalid!"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-32",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify that the error message clears when the user starts typing in the username field after a failed login attempt.",
+    "expectedResult": "Should be that the error message (Your username is invalid!) is no longer displayed.",
+    "testData": {
+      "initialUsername": "invaliduser",
+      "initialPassword": "Password123",
+      "inputToType": "s"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-33",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify that the error message clears when the user starts typing in the password field after a failed login attempt.",
+    "expectedResult": "Should be that the error message (Your username is invalid!) is no longer displayed.",
+    "testData": {
+      "initialUsername": "invaliduser",
+      "initialPassword": "Password123",
+      "inputToType": "P"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-34",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify the presence and correctness of the login credentials hint text (username and password) on the page.",
+    "expectedResult": "Should be that 'Username: student' and 'Password: Password123' are displayed correctly on the page.",
+    "testData": {
+      "expectedUsernameHint": "student",
+      "expectedPasswordHint": "Password123"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-35",
+    "module": "Footer",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify the presence and correctness of the copyright information in the footer.",
+    "expectedResult": "Should be that the footer displays 'Copyright 2020 Practice Test Automation. All rights reserved'.",
+    "testData": {
+      "expectedCopyrightText": "Copyright 2020 Practice Test Automation. All rights reserved"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-36",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify that the main heading 'Test login' is displayed on the page.",
+    "expectedResult": "Should be that the 'Test login' heading is present and visible.",
+    "testData": {
+      "expectedHeading": "Test login"
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-37",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify that the introductory description text for the login page is displayed correctly.",
+    "expectedResult": "Should be that the descriptive paragraph 'This is a simple Login page. Students can use this page to practice writing simple positive and negative LogIn tests. Login functionality is something that most of the test automation engineers need to automate.' is present and visible.",
+    "testData": {
+      "expectedDescription": "This is a simple Login page. Students can use this page to practice writing simple positive and negative LogIn tests. Login functionality is something that most of the test automation engineers need to automate."
+    },
+    "executedDate": "",
+    "executedBy": "",
+    "Status": "not tested",
+    "remarks": "NA"
+  },
+  {
+    "scenarioId": "TC-AUTO-38",
+    "module": "Login",
+    "createdAt": "2023-10-27",
+    "createdBy": "AI Automation Generator",
+    "scenario": "To verify that input fields are cleared and the error message is hidden after refreshing the page following a failed login attempt.",
+    "expectedResult": "Should be that both username and password input fields are empty, and the error message is not displayed after page refresh.",
+    "testData": {
+      "initialUsername": "invaliduser",
+      "initialPassword": "Password123"
     },
     "executedDate": "",
     "executedBy": "",

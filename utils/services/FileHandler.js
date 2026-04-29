@@ -7,41 +7,43 @@ try {
   xlsx = null;
 }
 
-class FileService {
+class FileHandler {
   constructor(basePath) {
+    // basePath should be the framework root
     this.basePath = basePath;
-    const frameworkRoot = path.join(this.basePath, "..");
     
-    this.dataDir = path.join(frameworkRoot, "test-data");
-    this.layoutsDir = path.join(frameworkRoot, "layouts"); 
-    this.memoryDir = path.join(frameworkRoot, "memory");
-    this.testsDir = path.join(frameworkRoot, "tests");
-    this.pagesDir = path.join(frameworkRoot, "pages");
-    this.verificationDir = path.join(frameworkRoot, "verification");
-    this.reportsDir = path.join(frameworkRoot, "reports");
-    this.obsDir = path.join(frameworkRoot, "test-results", "observations");
+    this.dataDir = path.join(this.basePath, "test-data");
+    this.snapshotsDir = path.join(this.basePath, "snapshots"); 
+    this.domsDir = path.join(this.snapshotsDir, "DOMs");
+    this.layoutsDir = path.join(this.snapshotsDir, "layouts");
+    this.scenariosDir = path.join(this.basePath, "scenarios");
+    this.testsDir = path.join(this.basePath, "tests");
+    this.pagesDir = path.join(this.basePath, "pages");
+    this.verificationDir = path.join(this.basePath, "verification");
+    this.reportsDir = path.join(this.basePath, "reports");
+    this.obsDir = path.join(this.basePath, "test-results", "observations");
 
-    [this.dataDir, this.layoutsDir, this.memoryDir, this.testsDir, this.pagesDir, this.verificationDir, this.reportsDir, this.obsDir].forEach((dir) => {
+    [this.dataDir, this.snapshotsDir, this.domsDir, this.layoutsDir, this.scenariosDir, this.testsDir, this.pagesDir, this.verificationDir, this.reportsDir, this.obsDir].forEach((dir) => {
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     });
   }
 
   saveLayout(safeName, cleanHtml, base64Image) {
     fs.writeFileSync(path.join(this.layoutsDir, `${safeName}.png`), base64Image, "base64");
-    fs.writeFileSync(path.join(this.layoutsDir, `${safeName}.html`), cleanHtml || "No HTML generated");
-    console.log(`-> [Extraction] Saved screenshot & HTML DOM to layouts/`);
+    fs.writeFileSync(path.join(this.domsDir, `${safeName}.html`), cleanHtml || "No HTML generated");
+    console.log(`-> [Extraction] Saved screenshot to snapshots/layouts/ & HTML DOM to snapshots/DOMs/`);
   }
 
   getLayoutHtml(safeName) {
     try {
-      return fs.readFileSync(path.join(this.layoutsDir, `${safeName}.html`), "utf8");
+      return fs.readFileSync(path.join(this.domsDir, `${safeName}.html`), "utf8");
     } catch (e) {
       return "";
     }
   }
 
   getMemoryPath(safeName) {
-    return path.join(this.memoryDir, `${safeName}_scenarios.json`);
+    return path.join(this.scenariosDir, `${safeName}_scenarios.json`);
   }
 
   readScenarios(memoryPath) {
@@ -84,8 +86,8 @@ class FileService {
   }
 
   getMemoryFiles() {
-    if (!fs.existsSync(this.memoryDir)) return [];
-    return fs.readdirSync(this.memoryDir).filter(f => f.endsWith('.json'));
+    if (!fs.existsSync(this.scenariosDir)) return [];
+    return fs.readdirSync(this.scenariosDir).filter(f => f.endsWith('.json'));
   }
 
   exportToExcel(scenarios, safeExcelName) {
@@ -118,4 +120,4 @@ class FileService {
   }
 }
 
-module.exports = new FileService(path.join(__dirname, "..", ".."));
+module.exports = new FileHandler(path.join(__dirname, "..", ".."));

@@ -1,8 +1,8 @@
 const { execSync } = require("child_process");
 const path = require("path");
-const aiService = require("../services/ai_service");
-const browserService = require("../services/browser_service");
-const fileService = require("../services/file_service");
+const aiService = require("../utils/services/AiEngine");
+const browserService = require("../utils/services/BrowserActions");
+const fileService = require("../utils/services/FileHandler");
 
 async function extractAndGenerateScenarios(url, safeName) {
   try {

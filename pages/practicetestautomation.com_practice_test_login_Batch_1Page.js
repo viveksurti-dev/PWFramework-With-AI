@@ -1,46 +1,51 @@
 import { BasePage } from './BasePage.js';
 
-class practicetestautomationcompracticetestloginBatch1Page extends BasePage {
+export class practicetestautomationcompracticetestloginBatch1Page extends BasePage {
     constructor(page) {
         super(page);
-        this.usernameInput = this.page.locator('#username');
-        this.passwordInput = this.page.locator('#password');
-        this.submitButton = this.page.locator('#submit');
+        this.usernameField = page.locator('#username');
+        this.passwordField = page.locator('#password');
+        this.submitButton = page.locator('#submit');
+        this.errorMessage = page.locator('#error');
     }
 
-    async fillUsername(username) {
-        await this.usernameInput.fill(username);
-        console.log(`Action: Filled username with '${username}'`);
+    async navigateToLoginPage(url) {
+        await this.page.goto(url);
+        await this.page.waitForLoadState('domcontentloaded');
+        console.log(`Navigated to login page: ${url}`);
     }
 
-    async fillPassword(password) {
-        await this.passwordInput.fill(password);
-        console.log(`Action: Filled password with '${password}'`);
+    async fillLoginForm(username, password) {
+        console.log(`Filling login form with username: \"${username}\" and password: \"${'*'.repeat(password.length)}\"`);
+        await this.usernameField.fill(username);
+        await this.passwordField.fill(password);
     }
 
-    async clickSubmit() {
+    async submitLogin() {
+        console.log('Clicking submit button.');
         await this.submitButton.click();
-        console.log('Action: Clicked Submit button');
+        await this.page.waitForLoadState('domcontentloaded'); // Wait for navigation or load state for robustness
     }
 
-    async login(username, password) {
-        await this.fillUsername(username);
-        await this.fillPassword(password);
-        await this.clickSubmit();
-        console.log(`Action: Attempted login with username '${username}' and password '${password}'`);
+    async performLogin(username, password) {
+        await this.fillLoginForm(username, password);
+        await this.submitLogin();
+        console.log('Login attempt completed.');
     }
 
-    async verifyLoginSuccess(expectedUrl, expectedSuccessContent, expectedLogoutButtonText) {
+    async verifySuccessfulLogin(expectedUrl, expectedSuccessContent, expectedLogoutButtonText) {
+        console.log('Performing successful login verification.');
         const { practicetestautomationcompracticetestloginBatch1Verification } = require('../verification/practicetestautomation.com_practice_test_login_Batch_1_Verification.js');
         const verification = new practicetestautomationcompracticetestloginBatch1Verification(this.page);
         await verification.verifySuccessfulLogin(expectedUrl, expectedSuccessContent, expectedLogoutButtonText);
+        console.log('Successful login verification completed.');
     }
 
-    async verifyLoginFailure() {
+    async verifyLoginError() {
+        console.log('Performing login error verification.');
         const { practicetestautomationcompracticetestloginBatch1Verification } = require('../verification/practicetestautomation.com_practice_test_login_Batch_1_Verification.js');
         const verification = new practicetestautomationcompracticetestloginBatch1Verification(this.page);
-        await verification.verifyErrorMessageVisible();
+        await verification.verifyLoginError();
+        console.log('Login error verification completed.');
     }
 }
-
-export { practicetestautomationcompracticetestloginBatch1Page };

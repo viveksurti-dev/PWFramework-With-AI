@@ -5,7 +5,7 @@
     "test": "playwright test --project=chromium --headed --workers=1", 
     "test:headed": "playwright test --project=chromium --headed --workers=1", 
     "codegen": "node recorder/CodegenManager.js",
-    "ai": "node \"E2E/index.js\"",
+    "ai": "node AppInterface.js",
     "allure:report": "allure generate allure-results --clean -o reports\\allure_report && allure open reports\\allure_report",
     "playwright:report": "playwright show-report reports/html"
   },
