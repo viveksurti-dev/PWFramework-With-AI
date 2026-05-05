@@ -1,0 +1,26 @@
+{
+  "name": "playwright-framework",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test --project=chromium --headed --workers=1",
+    "test:headed": "playwright test --project=chromium --headed --workers=1",
+    "codegen": "node recorder/CodegenManager.js",
+    "ai": "node AppInterface.js",
+    "allure:report": "allure generate allure-results --clean -o reports\\allure_report && allure open reports\\allure_report",
+    "playwright:report": "playwright show-report reports/html",
+    "pwai": "playwright test tests/practicetestautomati_NegativeScenarios.spec_1778001199252.spec.js --headed --workers=1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "allure-playwright": "^3.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.3.1",
+    "mysql2": "^3.6.5",
+    "openai": "^6.32.0",
+    "oracledb": "^6.3.0",
+    "xlsx": "^0.18.5"
+  }
+}

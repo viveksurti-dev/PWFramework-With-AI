@@ -1,0 +1,6 @@
+ReferenceError: flowContext is not defined
+    at FlowGenerator.generateNegativeScenariosInBatches (C:\Users\HP\Downloads\PWFramework-With-AI-main\utils\services\FlowGenerator.js:1113:18)
+    at FlowGenerator._internalGenerate (C:\Users\HP\Downloads\PWFramework-With-AI-main\utils\services\FlowGenerator.js:952:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async FlowGenerator.generateHybridFlow (C:\Users\HP\Downloads\PWFramework-With-AI-main\utils\services\FlowGenerator.js:435:20)
+    at async Timeout.<anonymous> (C:\Users\HP\Downloads\PWFramework-With-AI-main\config\AutomationManager.js:373:15)

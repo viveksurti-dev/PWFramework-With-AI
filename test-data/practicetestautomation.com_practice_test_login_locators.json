@@ -1,0 +1,110 @@
+[
+  {
+    "type": "input",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778001035048,
+    "value": "student",
+    "text": null,
+    "locators": {
+      "id": "username",
+      "name": "username",
+      "cssSelector": "#username",
+      "xpath": "//*[@id=\"username\"]",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "input",
+      "innerText": null
+    }
+  },
+  {
+    "type": "input",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778001043340,
+    "value": "Password123",
+    "text": null,
+    "locators": {
+      "id": "password",
+      "name": "password",
+      "cssSelector": "#password",
+      "xpath": "//*[@id=\"password\"]",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "input",
+      "innerText": null
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778001043254,
+    "value": null,
+    "text": "Submit",
+    "locators": {
+      "id": "submit",
+      "name": null,
+      "cssSelector": "#submit",
+      "xpath": "//*[@id=\"submit\"]",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "button",
+      "innerText": "Submit"
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/logged-in-successfully/",
+    "timestamp": 1778001047438,
+    "value": null,
+    "text": "PRACTICE",
+    "locators": {
+      "id": null,
+      "name": null,
+      "cssSelector": "#menu-item-20 > a",
+      "xpath": "/nav/ul/li[2]/a",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "a",
+      "innerText": "PRACTICE"
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice/",
+    "timestamp": 1778001049943,
+    "value": null,
+    "text": "Test Table",
+    "locators": {
+      "id": null,
+      "name": null,
+      "cssSelector": "div:nth-of-type(1) > p > a",
+      "xpath": "/div[3]/div[1]/p/a",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "a",
+      "innerText": "Test Table"
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice-test-table/",
+    "timestamp": 1778001052567,
+    "value": null,
+    "text": "CONTACT",
+    "locators": {
+      "id": null,
+      "name": null,
+      "cssSelector": "#menu-item-18 > a",
+      "xpath": "/nav/ul/li[5]/a",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "tagName": "a",
+      "innerText": "CONTACT"
+    }
+  }
+]
