@@ -1,0 +1,500 @@
+
+			<a class="skip-content" href="#main-container">Press "Enter" to skip to content</a>
+	<div id="overflow-container" class="overflow-container">
+		<div id="max-width" class="max-width">
+						<header class="site-header" id="site-header" role="banner">
+				<div class="header-top">
+					<div id="menu-secondary-container" class="menu-secondary-container">
+						<div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+    </div>
+					</div>
+					<div id="social-icons-container" class="social-icons-container">
+											</div>
+				</div>
+				<div class="header-middle">
+					<div id="title-container" class="title-container">
+						<div id="site-title" class="site-title"><a href="https://practicetestautomation.com/" class="custom-logo-link" rel="home"><img width="305" height="96" src="https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?fit=305%2C96&amp;ssl=1" class="custom-logo" alt="Practice Test Automation" decoding="async" srcset="https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?w=305&amp;ssl=1 305w, https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?resize=300%2C94&amp;ssl=1 300w" sizes="(max-width: 305px) 100vw, 305px"></a></div>											</div>
+									</div>
+				<div class="header-bottom">
+					<div id="mobile-menu-container" class="mobile-menu-container">
+						<div id="mobile-menu-container-inner">
+							<div id="close-mobile-menu" class="close-mobile-menu">
+								<button>
+																	</button>
+							</div>
+							<div id="menu-primary-container" class="menu-primary-container">
+								<div id="menu-primary" class="menu-container menu-primary" role="navigation">
+    <nav class="menu"><ul id="menu-primary-items" class="menu-primary-items"><li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-43"><a href="https://practicetestautomation.com/">Home</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://practicetestautomation.com/practice/">Practice</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://practicetestautomation.com/courses/">Courses</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="https://practicetestautomation.com/blog/">Blog</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://practicetestautomation.com/contact/">Contact</a></li>
+</ul></nav></div>
+							</div>
+						</div>
+					</div>
+					<div id="toggle-container" class="toggle-container">
+						<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">
+							<span class="screen-reader-text">open menu</span>
+													</button>
+					</div>
+				</div>
+			</header>
+									<section id="main-container" class="main-container" role="main">
+				
+<section id="xpath-table" class="entry">
+ <article class="post-963 page type-page status-publish hentry entry" style="max-width:100%;">
+    <header class="post-header">
+      <h1 class="post-title">Test Table</h1>
+    </header>
+
+    <div class="post-content">
+      
+<p class="">This page is created to practice building XPath locators for real-world tables. Use the table below to locate specific cells, rows, and links based on attributes like <code>data-col</code>, <code>headers</code>, or text content. Try writing locators for courses by language, level, or enrollment numbers, and verify that clicking a course link opens the correct page. If you want to learn how to master XPath and apply it in Selenium tests, check out my <a href="https://practicetestautomation.com/xpath-course-coupon">XPath Locators for Selenium</a> program.</p>
+
+
+
+<section id="xpath-table">
+  <h2>Automation Courses</h2>
+
+  <!-- CONTROLS -->
+  <div class="controls-title">
+    <h3>Filters</h3>
+    <div class="reset-row">
+      <button type="button" id="resetFilters" aria-label="Reset filters" style="display: none;">Reset</button>
+    </div>
+  </div>
+
+  <div class="filter-columns">
+    <!-- Language -->
+    <fieldset class="filter-group vertical">
+      <legend>Language</legend>
+      <label><input type="radio" name="lang" value="Any" checked=""> Any</label>
+      <label><input type="radio" name="lang" value="Java"> Java</label>
+      <label><input type="radio" name="lang" value="Python"> Python</label>
+    </fieldset>
+
+    <!-- Level -->
+    <fieldset class="filter-group vertical">
+      <legend>Level</legend>
+      <label><input type="checkbox" name="level" value="Beginner" checked=""> Beginner</label>
+      <label><input type="checkbox" name="level" value="Intermediate" checked=""> Intermediate</label>
+      <label><input type="checkbox" name="level" value="Advanced" checked=""> Advanced</label>
+    </fieldset>
+
+    <!-- Min enrollments -->
+    <fieldset class="filter-group">
+      <legend>Min enrollments</legend>
+      <div class="dropdown" id="enrollDropdown" data-value="any" tabindex="0" role="listbox" aria-label="Minimum enrollments">
+        <div class="dropdown-button" role="button" tabindex="0" aria-expanded="false">
+          <span class="dropdown-label">Any</span>
+        </div>
+        <ul class="dropdown-menu" role="listbox">
+          <li role="option" data-value="any" aria-selected="true">Any</li>
+          <li role="option" data-value="5000">5,000+</li>
+          <li role="option" data-value="10000">10,000+</li>
+          <li role="option" data-value="50000">50,000+</li>
+        </ul>
+      </div>
+    </fieldset>
+
+    <div class="controls-sep" aria-hidden="true"></div>
+
+    <!-- Sort row -->
+    <div class="sort-row">
+      <label for="sortBy">Sort by:</label>
+      <select id="sortBy">
+        <option value="col_id">ID</option>
+        <option value="col_course">Course Name</option>
+        <option value="col_lang">Language</option>
+        <option value="col_level">Level</option>
+        <option value="col_enroll">Enrollments</option>
+      </select>
+    </div>
+  </div>
+  <!-- /CONTROLS -->
+
+  <div id="noData" class="no-data" style="display:none; margin:8px 0; font-weight:600;">
+    No matching courses.
+  </div>
+
+  <table id="courses_table" border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th id="col_id" scope="col">ID</th>
+        <th id="col_course" scope="col">Course Name</th>
+        <th id="col_lang" scope="col">Language</th>
+        <th id="col_level" scope="col">Level</th>
+        <th id="col_enroll" scope="col">Enrollments</th>
+        <th id="col_link" scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <tr>
+        <td headers="col_id" data-col="id">1517620</td>
+        <td headers="col_course" data-col="course">Selenium Framework</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Advanced</td>
+        <td headers="col_enroll" data-col="enrollments">2667</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/selenium-webdriver-test-framework-from-scratch-referralCode" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">1693880</td>
+        <td headers="col_course" data-col="course">Selenium with Java</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Beginner</td>
+        <td headers="col_enroll" data-col="enrollments">64284</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/beginners-course-coupon" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">1743612</td>
+        <td headers="col_course" data-col="course">XPath Locators</td>
+        <td headers="col_lang" data-col="language">Any</td>
+        <td headers="col_level" data-col="level">Beginner</td>
+        <td headers="col_enroll" data-col="enrollments">14762</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/xpath-course-coupon" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">1904956</td>
+        <td headers="col_course" data-col="course">Advanced Selenium</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Intermediate</td>
+        <td headers="col_enroll" data-col="enrollments">16452</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/advanced-course-coupon" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">2854476</td>
+        <td headers="col_course" data-col="course">REST Assured</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Intermediate</td>
+        <td headers="col_enroll" data-col="enrollments">8254</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/rest-assured-course-coupon" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">3970682</td>
+        <td headers="col_course" data-col="course">Selenium Grid</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Advanced</td>
+        <td headers="col_enroll" data-col="enrollments">2207</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/selenium-grid" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">4536644</td>
+        <td headers="col_course" data-col="course">Java for Testers</td>
+        <td headers="col_lang" data-col="language">Java</td>
+        <td headers="col_level" data-col="level">Beginner</td>
+        <td headers="col_enroll" data-col="enrollments">6678</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/java-for-testers-udemy" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">4824578</td>
+        <td headers="col_course" data-col="course">Selenium with Python</td>
+        <td headers="col_lang" data-col="language">Python</td>
+        <td headers="col_level" data-col="level">Beginner</td>
+        <td headers="col_enroll" data-col="enrollments">10705</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/selenium-python-udemy" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr><tr>
+        <td headers="col_id" data-col="id">5393658</td>
+        <td headers="col_course" data-col="course">Python for Testers</td>
+        <td headers="col_lang" data-col="language">Python</td>
+        <td headers="col_level" data-col="level">Beginner</td>
+        <td headers="col_enroll" data-col="enrollments">1365</td>
+        <td headers="col_link" data-col="link">
+          <a href="https://practicetestautomation.com/python-for-testers" target="_blank" rel="noopener noreferrer">View</a>
+        </td>
+      </tr></tbody>
+  </table>
+
+  
+</section>
+
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 1: Language filter → Java</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Select Language = Java</li>
+
+
+
+<li class="">Verify only Java courses are visible</li>
+</ol>
+
+
+
+<p class="">Fails if language filter is not reapplied on change</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 2: Level filter → Beginner only</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Uncheck Intermediate and Advanced</li>
+
+
+
+<li class="">Verify that only Beginner courses are visible</li>
+</ol>
+
+
+
+<p class="">Fails if unchecked levels still pass the filter</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 3: Min enrollments → 10,000+</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Open “Min enrollments” dropdown and choose 10,000+</li>
+
+
+
+<li class="">Verify every visible row shows enrollments ≥ 10,000</li>
+</ol>
+
+
+
+<p class="">Fails if numeric comparison is done as strings</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 4: Combined filters → Python + Beginner + 10,000+</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Select Language = Python</li>
+
+
+
+<li class="">Uncheck Intermediate and Advanced</li>
+
+
+
+<li class="">Set Min enrollments = 10,000+</li>
+
+
+
+<li class="">Verify only Python Beginner courses with ≥ 10,000 enrollments are visible</li>
+</ol>
+
+
+
+<p class="">Fails if incorrect courses are visible</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 5: No results state</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Select a combination that yields no matches (e.g., Language with Level that does not exist)</li>
+
+
+
+<li class="">Verify “No matching courses.” is shown</li>
+</ol>
+
+
+
+<p class="">Fails if no-data state does not toggle with filters</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 6: Reset button visibility and behavior</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Change any filter</li>
+
+
+
+<li class="">Verify the Reset button becomes visible</li>
+
+
+
+<li class="">Click Reset</li>
+
+
+
+<li class="">Verify Language = Any, all Levels checked, Min enrollments = Any</li>
+
+
+
+<li class="">Verify the Reset button is hidden and all rows are visible</li>
+</ol>
+
+
+
+<p class="">Fails if defaults or visibility logic are not restored</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 7: Sort by Enrollments (ascending, numeric)</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Set Sort by = Enrollments</li>
+
+
+
+<li class="">Verify visible rows are ordered from smallest to largest enrollment</li>
+
+
+
+<li class="">Verify numbers with commas sort correctly</li>
+</ol>
+
+
+
+<p class="">Fails if the sort is lexicographic</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h5 class="wp-block-heading">Test case 8: Sort by Course Name (alphabetical)</h5>
+
+
+
+<ol class="wp-block-list">
+<li class="">Open page</li>
+
+
+
+<li class="">Set Sort by = Course Name</li>
+
+
+
+<li class="">Verify visible rows are ordered A→Z by course name</li>
+
+
+
+<li class="">Verify order updates after changing filters</li>
+</ol>
+
+
+
+<p class="">Fails if string compare ignores case/whitespace inconsistently</p>
+
+
+
+<p class=""></p>
+    </div>
+  </article>
+</section>
+
+
+</section> <!-- .main-container -->
+
+<footer id="site-footer" class="site-footer" role="contentinfo">
+        <div class="design-credit">
+        <span>
+            © Copyright 2020  <a href="https://practicetestautomation.com/">Practice Test Automation.</a>  All rights reserved  |  <a href="https://practicetestautomation.com/privacy-policy/">Privacy Policy</a>        </span>
+    </div>
+</footer>
+</div><!-- .max-width -->
+</div><!-- .overflow-container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

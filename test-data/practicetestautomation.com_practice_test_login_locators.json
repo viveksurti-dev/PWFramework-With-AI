@@ -1,0 +1,178 @@
+[
+  {
+    "type": "input",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778690874092,
+    "value": "student",
+    "text": null,
+    "locators": {
+      "playwright": [],
+      "xpathList": "xpath=//*[@id=\"username\"]",
+      "cssList": [
+        "#username",
+        "input[name=\"username\"]",
+        "#username"
+      ],
+      "textList": [],
+      "ariaList": [],
+      "id": "username",
+      "name": "username",
+      "tagName": "input",
+      "innerText": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#username",
+      "xpath": "x",
+      "textXPath": null,
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": "xpath=//input[@name=\"username\"]",
+      "idXPath": "xpath=//*[@id=\"username\"]",
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  },
+  {
+    "type": "input",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778690878709,
+    "value": "Password123",
+    "text": null,
+    "locators": {
+      "playwright": [],
+      "xpathList": "xpath=//*[@id=\"password\"]",
+      "cssList": [
+        "#password",
+        "input[name=\"password\"]",
+        "#password"
+      ],
+      "textList": [],
+      "ariaList": [],
+      "id": "password",
+      "name": "password",
+      "tagName": "input",
+      "innerText": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#password",
+      "xpath": "x",
+      "textXPath": null,
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": "xpath=//input[@name=\"password\"]",
+      "idXPath": "xpath=//*[@id=\"password\"]",
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice-test-login/",
+    "timestamp": 1778690878512,
+    "value": null,
+    "text": "Submit",
+    "locators": {
+      "playwright": [
+        "getByRole('button', { name: 'Submit' })",
+        "getByText('Submit', { exact: true })"
+      ],
+      "xpathList": "xpath=//*[@id=\"submit\"]",
+      "cssList": [
+        "#submit",
+        "#submit"
+      ],
+      "textList": [
+        "xpath=//button[normalize-space()='Submit']"
+      ],
+      "ariaList": [],
+      "id": "submit",
+      "name": null,
+      "tagName": "button",
+      "innerText": "Submit",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#submit",
+      "xpath": "x",
+      "textXPath": "xpath=//button[normalize-space()='Submit']",
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": null,
+      "idXPath": "xpath=//*[@id=\"submit\"]",
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/logged-in-successfully/",
+    "timestamp": 1778690882541,
+    "value": null,
+    "text": "PRACTICE",
+    "locators": {
+      "playwright": [
+        "getByRole('link', { name: 'Practice' })",
+        "getByText('Practice', { exact: true })"
+      ],
+      "xpathList": "xpath=//nav/ul/li[2]/a",
+      "cssList": [],
+      "textList": [
+        "xpath=//a[normalize-space()='Practice']"
+      ],
+      "ariaList": [],
+      "id": null,
+      "name": null,
+      "tagName": "a",
+      "innerText": "Practice",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#menu-primary-items > li:nth-of-type(2) > a",
+      "xpath": "x",
+      "textXPath": "xpath=//a[normalize-space()='Practice']",
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": null,
+      "idXPath": null,
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice/",
+    "timestamp": 1778690884830,
+    "value": null,
+    "text": "Test Table",
+    "locators": {
+      "playwright": [
+        "getByRole('link', { name: 'Test Table' })",
+        "getByText('Test Table', { exact: true })"
+      ],
+      "xpathList": "xpath=//div[3]/div[1]/p/a",
+      "cssList": [],
+      "textList": [
+        "xpath=//a[normalize-space()='Test Table']"
+      ],
+      "ariaList": [],
+      "id": null,
+      "name": null,
+      "tagName": "a",
+      "innerText": "Test Table",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "div:nth-of-type(1) > p > a",
+      "xpath": "x",
+      "textXPath": "xpath=//a[normalize-space()='Test Table']",
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": null,
+      "idXPath": null,
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice-test-table/",
+    "timestamp": 1778703459580,
+    "value": null,
+    "text": "Test Table\n\nThis page is created to practice building XPath locators for real-wo",
+    "locators": {
+      "playwright": [],
+      "xpathList": "xpath=//*[@id=\"xpath-table\"]",
+      "cssList": [
+        "#xpath-table",
+        "#xpath-table"
+      ],
+      "textList": [],
+      "ariaList": [],
+      "id": "xpath-table",
+      "name": null,
+      "tagName": "section",
+      "innerText": null,
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#xpath-table",
+      "xpath": "x",
+      "textXPath": null,
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": null,
+      "idXPath": "xpath=//*[@id=\"xpath-table\"]",
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  },
+  {
+    "type": "click",
+    "url": "https://practicetestautomation.com/practice-test-table/",
+    "timestamp": 1778703468915,
+    "value": null,
+    "text": "CONTACT",
+    "locators": {
+      "playwright": [
+        "getByRole('link', { name: 'Contact' })",
+        "getByText('Contact', { exact: true })"
+      ],
+      "xpathList": "xpath=//nav/ul/li[5]/a",
+      "cssList": [],
+      "textList": [
+        "xpath=//a[normalize-space()='Contact']"
+      ],
+      "ariaList": [],
+      "id": null,
+      "name": null,
+      "tagName": "a",
+      "innerText": "Contact",
+      "placeholder": null,
+      "ariaLabel": null,
+      "testId": null,
+      "cssSelector": "#menu-primary-items > li:nth-of-type(5) > a",
+      "xpath": "x",
+      "textXPath": "xpath=//a[normalize-space()='Contact']",
+      "ariaXPath": null,
+      "placeholderXPath": null,
+      "nameXPath": null,
+      "idXPath": null,
+      "nthMatch": null,
+      "nthXPath": null
+    }
+  }
+]

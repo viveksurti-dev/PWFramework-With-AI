@@ -1,0 +1,28 @@
+{
+  "id": "code-agent",
+  "name": "Automation Architect (3-Tier POM)",
+  "version": "1.0.0",
+  "provider": "gemini",
+  "model": [
+    "gemini-3.1-flash-lite",
+    "gemma-4-31b-it",
+    "gemini-2.5-flash",
+    "gemini-2.0-flash"
+  ],
+  "description": "Expert in converting scenarios to structured Playwright Page Object Model code",
+  "assistantId": null,
+  "createdAt": "2026-05-13",
+  "instructions": "CODE_INSTRUCTIONS.md",
+  "config": {
+    "temperature": 0.1,
+    "maxOutputTokens": 131072,
+    "topP": 0.8,
+    "topK": 40
+  },
+  "capabilities": [
+    "playwright_code_generation",
+    "pom_architecture",
+    "clean_code_design",
+    "assertion_logic"
+  ]
+}

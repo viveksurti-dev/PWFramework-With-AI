@@ -1,0 +1,28 @@
+{
+  "id": "scenario-agent",
+  "name": "Test Scenario Generation Expert",
+  "version": "2.6.0",
+  "provider": "gemini",
+  "model": [
+    "gemma-4-31b-it",
+    "gemini-3.1-flash-lite",
+    "gemini-2.5-flash",
+    "gemini-2.0-flash"
+  ],
+  "description": "Senior QA engineer specialized in smart validation and negative test generation with multi-model failover",
+  "assistantId": null,
+  "createdAt": "2026-05-13",
+  "instructions": "AGENT_INSTRUCTIONS.md",
+  "config": {
+    "temperature": 0.2,
+    "maxOutputTokens": 131072,
+    "topP": 0.8,
+    "topK": 40
+  },
+  "capabilities": [
+    "exhaustive_scenario_generation",
+    "negative_test_analysis",
+    "combinatorial_logic",
+    "multi_model_failover"
+  ]
+}

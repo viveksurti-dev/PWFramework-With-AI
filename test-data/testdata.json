@@ -1,0 +1,12 @@
+{
+  "login": {
+    "BASE_URL": "https://qa-sidbi-earth.instantmseloans.in/home/sidbimsmedigi",
+    "USER_NAME": "darshit.prajapati@oplinnovate.com",
+    "PASSWORD": "ADmin@123",
+    "WRONGPASSWORD": "sfsdfsdf"
+  },
+  "verification": {
+    "EXPECTED_USER_NAME": "darshit.prajapati@oplinnovate.com",
+    "DASHBOARD_URL": ""
+  }
+}
